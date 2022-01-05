@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import { Header, Title, NavBar } from "./components";
 
 export default () => {
@@ -7,8 +9,8 @@ export default () => {
         <Header>
             <Title> Calculator App</Title>
             <NavBar>
-                <a href="#">Home</a>
-                <a href="#">Setting</a>
+                <Link to="/">Home</Link>
+                <Link to="/settings">Settings</Link>
             </NavBar>
         </Header>
     )

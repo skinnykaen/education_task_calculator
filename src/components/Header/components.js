@@ -27,4 +27,8 @@ export const NavBar = styled.div`
         color: white;
         font-size: 1.17em;
     }
+
+    a &:hover {
+        color: red;
+    }
 `;
