@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 export const Header = styled.div`
-    display: flex;
+    display: flex;  
     justify-content: space-between;
+    align-items: flex-start;
 
     width: 100%;
-    height: 10%;
+    height: 12%;
     padding: 3%;
 
     color: white;
 
-    border-radius: 10px;
     background-color: grey;
 `;
 
@@ -21,14 +21,15 @@ export const NavBar = styled.div`
     justify-content: space-between;
 
     min-width: 150px;
+    height: 30px;
 
     a {       
         text-decoration: none;
-        color: white;
+        color: lightgrey;
         font-size: 1.17em;
-    }
-
-    a &:hover {
-        color: red;
+        &:hover{
+            color: white;
+            border-bottom: 3px solid silver;
+        }
     }
 `;
