@@ -1,18 +1,28 @@
+import { func } from "prop-types";
 import React from "react";
 
 import { Link } from "react-router-dom";
+import { Flex } from "../Flex/components";
 
 import { Header, Title, NavBar } from "./components";
 
-export default () => {
+function isCurrent() {
+    return !!window.location.href.slice(20)
+}
 
+export default (props) => {
     return (
-        <Header>
-            <Title> Calculator App</Title>
-            <NavBar>
-                <Link to="/">Home</Link>
-                <Link to="/settings">Settings</Link>
-            </NavBar>
+        <Header {...props}>
+            <Flex justify='space-between' align='flex-start'>
+                <Title> Calculator App</Title>
+                <NavBar current={isCurrent()}>
+                    <Flex justify='space-between'>
+                        <Link to="/">Home</Link>
+                        <Link to="/settings">Settings</Link>
+                    </Flex>
+                </NavBar>
+            </Flex>
         </Header>
+
     )
 }

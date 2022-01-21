@@ -11,4 +11,7 @@ export const store = createStore(
   applyMiddleware(sagaMiddleware),
 )
 
+// Put away
+window.store = store;
+
 sagaMiddleware.run(rootSaga)

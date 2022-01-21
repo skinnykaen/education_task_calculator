@@ -2,7 +2,7 @@ import React from "react";
 
 import Display from '@/components/Display';
 import History from '@/components/History';
-import Keypad from '@/components/Keypad'
+import Keypad from '@/components/Keypad';
 
 import { Calculator, Section } from "./components";
 

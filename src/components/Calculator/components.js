@@ -12,7 +12,7 @@ export const Calculator = styled.div`
     border: 1px solid black;
 `;
 
-// Section - wrapper for Display and Keypad
+// Section - wrapper for Display and KeyPad
 
 export const Section = styled.div`
     display: flex;
