@@ -6,8 +6,8 @@ import { Flex } from "../Flex/components";
 
 import { Header, Title, NavBar } from "./components";
 
-function isCurrent() {
-    return !!window.location.href.slice(20)
+function isSetting(props) {
+    return !!props.location.pathname.slice(1)
 }
 
 export default (props) => {
@@ -15,14 +15,14 @@ export default (props) => {
         <Header {...props}>
             <Flex justify='space-between' align='flex-start'>
                 <Title> Calculator App</Title>
-                <NavBar current={isCurrent()}>
+                <NavBar isSetting={isSetting(props)} {...props}>
                     <Flex justify='space-between'>
-                        <Link to="/">Home</Link>
-                        <Link to="/settings">Settings</Link>
+                        <Link to='/'>Home</Link>
+                        <Link to='/settings'>Settings</Link>
                     </Flex>
                 </NavBar>
             </Flex>
-        </Header>
+        </Header >
 
     )
 }

@@ -6,4 +6,7 @@ export const Flex = styled.div`
     align-items: ${props => props.align || 'stretch'};
     justify-content: ${props => props.justify || 'stretch'};
     margin: ${({ margin }) => margin || '0'};
+
+    width: ${({ width }) => width || 'auto'};
+    height: ${({ height }) => height || 'auto'};
 `;

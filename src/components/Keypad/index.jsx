@@ -2,9 +2,9 @@ import React from "react";
 
 import { Keypad } from "./components";
 
-export default () => {
+export default (props) => {
 
     return (
-        <Keypad></Keypad>
+        <Keypad {...props}></Keypad>
     )
 }

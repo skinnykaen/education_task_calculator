@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import { PageLayout } from '@/layouts';
 
@@ -7,14 +8,21 @@ import Calculator from '@/components/Calculator';
 
 import { Card } from './components';
 
-export default () => {
+import { swithThemeAction, getTheme } from "@/reducers/switchTheme";
+
+const Wrapper = (props) => {
   return (
     <PageLayout>
-      <Card>
-
-        <Header />
-        <Calculator />
+      <Card {...props}>
+        <Header {...props} />
+        <Calculator {...props} />
       </Card>
     </PageLayout>
   )
 }
+
+let mapStateToProps = (state) => ({
+  currentTheme: getTheme(state.switchTheme),
+});
+
+export default connect(mapStateToProps, {})(Wrapper)

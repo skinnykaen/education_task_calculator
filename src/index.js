@@ -11,7 +11,13 @@ import Application from '@/App'
 
 import { store } from '@/store'
 import theme from '@/theme'
+import { lightTheme, darkTheme, coloredTheme } from '@/theme'
 import GlobalStyles from '@/globalStyles'
+
+
+// ??? Здесь ли происходит свич темы
+
+
 
 ReactDOM.render(
   <Provider store={store}>

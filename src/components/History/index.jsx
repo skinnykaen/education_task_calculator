@@ -3,10 +3,10 @@ import React from "react";
 
 import { History } from "./components";
 
-export default () => {
+export default (props) => {
 
     return (
-        <History>
+        <History {...props}>
             <h4>History</h4>
         </History>
     )

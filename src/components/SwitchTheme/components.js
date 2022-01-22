@@ -14,8 +14,9 @@ export const SwitchTheme = styled.div`
     
         font-size: 18px;
         width: 25%;
-        heidht: 10%;
+        height: 85%;
 
         border-radius: 5px;
+        outline: none;
     }
 `;
