@@ -61,6 +61,8 @@ export default {
     headingTextColor: 'lightgrey',
     headingActiveTextColor: 'white',
     border: 'grey',
+    keyButtonColor: 'lightgrey',
+    keyButtonHoverColor: 'darkgrey',
   },
   dark: {
     background: 'grey',
@@ -69,6 +71,8 @@ export default {
     headingTextColor: 'silver',
     headingActiveTextColor: 'white',
     border: 'black',
+    keyButtonColor: 'lightgrey',
+    keyButtonHoverColor: 'darkgrey',
   },
   colored: {
     background: 'peachpuff',
@@ -77,6 +81,8 @@ export default {
     headingTextColor: 'bisque',
     headingActiveTextColor: 'white',
     border: 'sienna',
+    keyButtonColor: 'khaki',
+    keyButtonHoverColor: 'darkkhaki',
   }
 }
 

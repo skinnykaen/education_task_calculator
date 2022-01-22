@@ -25,4 +25,4 @@ let mapStateToProps = (state) => ({
   currentTheme: getTheme(state.switchTheme),
 });
 
-export default connect(mapStateToProps, {})(Wrapper)
+export default connect(mapStateToProps, { swithThemeAction })(Wrapper)

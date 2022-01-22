@@ -2,7 +2,7 @@ import { func } from "prop-types";
 import React from "react";
 
 import { Link } from "react-router-dom";
-import { Flex } from "../Flex/components";
+import Flex from "@/components/Flex";
 
 import { Header, Title, NavBar } from "./components";
 
