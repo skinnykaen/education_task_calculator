@@ -8,7 +8,15 @@ import { Calculator, Section } from "./components";
 import { Flex } from "../Flex/components";
 import { connect } from "react-redux";
 
-import { getExpression, clickKeyButton, clickKeyClearEntry } from '@/reducers/keypad';
+import {
+    getExpression,
+    clickKeyButton,
+    clickKeyClearEntry,
+    clickKeyClear,
+    clickHistoryElement,
+    clickResultButton,
+    getHistory,
+} from '@/reducers/calculator';
 
 const Wrapper = (props) => {
 
@@ -26,7 +34,8 @@ const Wrapper = (props) => {
 }
 
 let mapStateToProps = (state) => ({
-    expression: getExpression(state.keypad)
+    expression: getExpression(state.calculator),
+    history: getHistory(state.calculator)
 });
 
-export default connect(mapStateToProps, { clickKeyButton, clickKeyClearEntry })(Wrapper);
+export default connect(mapStateToProps, { clickKeyButton, clickKeyClearEntry, clickKeyClear, clickHistoryElement, clickResultButton })(Wrapper);

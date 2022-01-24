@@ -10,8 +10,9 @@ export const Display = styled.div`
     border-bottom: 1px solid ${props => props.theme[props.currentTheme].border};
 
     background-color: ${props => props.theme[props.currentTheme].background};
+    color: ${props => props.theme[props.currentTheme].textColor};
         
     padding: 12% 0 0 0;
 
-    font-size: 50px;
+    font-size: 3rem;
 `;

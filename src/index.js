@@ -15,10 +15,6 @@ import { lightTheme, darkTheme, coloredTheme } from '@/theme'
 import GlobalStyles from '@/globalStyles'
 
 
-// ??? Здесь ли происходит свич темы
-
-
-
 ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>

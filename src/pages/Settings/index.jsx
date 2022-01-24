@@ -16,7 +16,7 @@ const Wrapper = (props) => {
         <PageLayout>
             <Card {...props}>
                 <Header {...props} />
-                <SettingWrapper>
+                <SettingWrapper {...props}>
                     <h1>Settings</h1>
                     <SwitchTheme {...props}></SwitchTheme>
                 </SettingWrapper>

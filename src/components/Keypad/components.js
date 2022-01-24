@@ -7,7 +7,7 @@ export const Keypad = styled.div`
     width: 100%;
     height: 80%;
 
-    padding: 0 5%;
+    padding: 5%;
 
     background-color: ${props => props.theme[props.currentTheme].background};
 `;

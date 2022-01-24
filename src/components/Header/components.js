@@ -19,7 +19,7 @@ export const NavBar = styled.div`
 
     a {
         text-decoration: none;
-        font-size: 1.17em;
+        font-size: 1.17rem;
         &:hover{
             color: ${props => props.theme[props.currentTheme].headingActiveTextColor} !important;;
             border-bottom: 3px solid ${props => props.theme[props.currentTheme].headingActiveTextColor} !important;

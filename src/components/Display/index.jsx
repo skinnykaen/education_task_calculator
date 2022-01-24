@@ -5,9 +5,8 @@ import { Display } from "./components";
 export default (props) => {
 
     function showExpression(expression) {
-        const MAX_LENGTH = 27;
-        // console.log(expression.slice(Math.trunc(expression.length / MAX_LENGTH) * MAX_LENGTH))
-        return expression.slice(Math.trunc(expression.length / MAX_LENGTH) * MAX_LENGTH)
+        const MAX_LENGTH = 24;
+        return (expression.length > MAX_LENGTH) ? expression.slice(expression.length - MAX_LENGTH) : expression;
     }
 
     return (

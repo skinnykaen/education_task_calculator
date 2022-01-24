@@ -76,7 +76,7 @@ export default {
   },
   colored: {
     background: 'peachpuff',
-    textColor: 'black',
+    textColor: 'brown',
     headingColor: 'sienna',
     headingTextColor: 'bisque',
     headingActiveTextColor: 'white',

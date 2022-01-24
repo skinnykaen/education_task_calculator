@@ -7,7 +7,7 @@ export default (props) => {
     return (
         <Keypad {...props}>
             <Row>
-                <KeyButton {...props}>C</KeyButton>
+                <KeyButton {...props} onClick={() => { props.clickKeyClear() }}>C</KeyButton>
                 <KeyButton {...props} onClick={() => { props.clickKeyButton(7) }}>7</KeyButton>
                 <KeyButton {...props} onClick={() => { props.clickKeyButton(8) }}>8</KeyButton>
                 <KeyButton {...props} onClick={() => { props.clickKeyButton(9) }}>9</KeyButton>
@@ -25,7 +25,7 @@ export default (props) => {
                 <KeyButton {...props} onClick={() => { props.clickKeyButton(1) }}>1</KeyButton>
                 <KeyButton {...props} onClick={() => { props.clickKeyButton(2) }}>2</KeyButton>
                 <KeyButton {...props} onClick={() => { props.clickKeyButton(3) }}>3</KeyButton>
-                <KeyButton {...props}>=</KeyButton>
+                <KeyButton {...props} onClick={() => { props.clickResultButton() }}>=</KeyButton>
             </Row>
             <Row>
                 <KeyButton {...props} onClick={() => { props.clickKeyButton('.') }}>.</KeyButton>

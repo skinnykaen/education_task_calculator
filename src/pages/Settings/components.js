@@ -23,7 +23,8 @@ export const SettingWrapper = styled.div`
   margin: 3%;
 
   h1{
-    font-size: 45px;
+    font-size: 3rem;
+    color: ${props => props.theme[props.currentTheme].textColor};
   }
 
   display: flex;

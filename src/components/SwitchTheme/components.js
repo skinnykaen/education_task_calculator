@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Title = styled.h3`
     margin-top: 1%;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 1rem;
 `
 
 export const SwitchTheme = styled.div`
@@ -12,7 +12,7 @@ export const SwitchTheme = styled.div`
 
     select{
     
-        font-size: 18px;
+        font-size: 1.2rem;
         width: 25%;
         height: 85%;
 
