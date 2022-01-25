@@ -35,7 +35,8 @@ const Wrapper = (props) => {
 
 let mapStateToProps = (state) => ({
     expression: getExpression(state.calculator),
-    history: getHistory(state.calculator)
+    history: getHistory(state.calculator),
+
 });
 
 export default connect(mapStateToProps, { clickKeyButton, clickKeyClearEntry, clickKeyClear, clickHistoryElement, clickResultButton })(Wrapper);

@@ -13,7 +13,6 @@ export const History = styled.div`
     border-left: 1px solid ${props => props.theme[props.currentTheme].border};
     background-color: ${props => props.theme[props.currentTheme].background};
 
-    display: flex;
 
     color: ${props => props.theme[props.currentTheme].textColor};
 
