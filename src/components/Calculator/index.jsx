@@ -18,25 +18,19 @@ import {
     getHistory,
 } from '@/reducers/calculator';
 
-const Wrapper = (props) => {
+export default (props) => {
 
     return (
-        <Calculator {...props}>
+        <Calculator>
             <Flex direction='column' width='65%' margin='0 0 0 2%'>
-                <Display {...props}></Display>
-                <Keypad {...props}></Keypad>
+                <Display></Display>
+                <Keypad></Keypad>
             </Flex>
 
-            <History {...props}></History>
+            <History></History>
 
         </Calculator >
     )
 }
 
-let mapStateToProps = (state) => ({
-    expression: getExpression(state.calculator),
-    history: getHistory(state.calculator),
-
-});
-
-export default connect(mapStateToProps, { clickKeyButton, clickKeyClearEntry, clickKeyClear, clickHistoryElement, clickResultButton })(Wrapper);
+// to do test, clear history, select

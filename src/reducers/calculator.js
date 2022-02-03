@@ -19,7 +19,7 @@ function makeExpression(expression) {
     try {
         return expression.replace(/\D\./, (s) => s.slice(0, 1) + '0.').replace('00.', '0.').replace('\\', '/');
     } catch (e) {
-        throwError(e.toString());
+        // throwError(e.toString());
         alert(e)
         // alert(e.type);
         return '';
@@ -30,9 +30,9 @@ function makeExpression(expression) {
 function calculation(expression) {
     try {
         let result = (parseInt(eval(makeExpression(expression)) * 1000) / 1000).toString();
-        return isNan(result) ? '' : result;
+        return isNaN(result) ? '' : result;
     } catch (e) {
-        throwError(e.toString());
+        // throwError(e.toString());
         alert(e)
         return '';
     }
@@ -43,10 +43,10 @@ export default handleActions({
         return { ...state, expression: state.expression + action.payload };
     },
     [clickKeyClearEntry](state) {
-        return { ...state, expression: '' };
+        return { ...state, expression: state.expression.slice(0, -1) };
     },
     [clickKeyClear](state) {
-        return { ...state, expression: '', history: [] };
+        return { ...state, expression: '' };
     },
     [clickHistoryElement](state, action) {
         return { ...state, expression: action.payload };

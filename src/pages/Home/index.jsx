@@ -10,7 +10,7 @@ import { Card } from './components';
 
 import { swithThemeAction, getTheme } from "@/reducers/switchTheme";
 
-const Wrapper = (props) => {
+export default (props) => {
   return (
     <PageLayout>
       <Card {...props}>
@@ -20,9 +20,3 @@ const Wrapper = (props) => {
     </PageLayout>
   )
 }
-
-let mapStateToProps = (state) => ({
-  currentTheme: getTheme(state.switchTheme),
-});
-
-export default connect(mapStateToProps, { swithThemeAction })(Wrapper)

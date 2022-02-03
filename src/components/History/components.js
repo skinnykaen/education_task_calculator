@@ -10,11 +10,11 @@ export const History = styled.div`
 
     margin: 2% 0 0 0;
 
-    border-left: 1px solid ${props => props.theme[props.currentTheme].border};
-    background-color: ${props => props.theme[props.currentTheme].background};
+    border-left: 1px solid ${props => props.theme.border};
+    background-color: ${props => props.theme.background};
 
 
-    color: ${props => props.theme[props.currentTheme].textColor};
+    color: ${props => props.theme.textColor};
 
     h4{
         text-align: center;
@@ -26,6 +26,15 @@ export const HistoryContent = styled.div`
     height: 100%;
     list-style-type: none; 
     overflow: auto; 
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: #f9f9fd;
+    }
+      
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: grey;
+    }
 `;
 
 export const HistoryElement = styled.div`
@@ -39,7 +48,7 @@ export const HistoryElement = styled.div`
     font-size: 1.2rem;
     
     &:hover {
-        background-color: ${props => props.theme[props.currentTheme].headingColor};
-        color: ${props => props.theme[props.currentTheme].headingActiveTextColor};
+        background-color: ${props => props.theme.headingColor};
+        color: ${props => props.theme.headingActiveTextColor};
         }
 `;

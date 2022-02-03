@@ -1,15 +1,17 @@
 import React from "react";
 
-import HistoryContent from "./HistoryContent"
+import HistoryContent from "./HistoryContent";
+import ControlPanel from "@/components/ControlPanel";
 
 import { History } from "./components";
 
 export default (props) => {
 
     return (
-        <History {...props}>
+        <History >
             <h4>History</h4>
-            <HistoryContent {...props}></HistoryContent>
+            <HistoryContent></HistoryContent>
+            <ControlPanel />
         </History >
     )
 }

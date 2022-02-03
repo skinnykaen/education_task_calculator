@@ -9,7 +9,7 @@ export const Keypad = styled.div`
 
     padding: 5%;
 
-    background-color: ${props => props.theme[props.currentTheme].background};
+    background-color: ${props => props.theme.background};
 `;
 
 export const KeyButton = styled.button`
@@ -21,17 +21,17 @@ export const KeyButton = styled.button`
     font-size: 200%;
     border-radius: 0.8rem;
     border: 1px solid grey;
-    background-color: ${props => props.theme[props.currentTheme].keyButtonColor};
+    background-color: ${props => props.theme.keyButtonColor};
     outline: none;
 
     &:hover {
-        background-color: ${props => props.theme[props.currentTheme].keyButtonHoverColor};
+        background-color: ${props => props.theme.keyButtonHoverColor};
     }
 
 `;
 
 export const Row = styled.div`
     display: flex;
-    justify-content: space-between;
-
+    justify-content: space-around;
+    padding: 0.3rem;
 `;

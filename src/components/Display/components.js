@@ -7,10 +7,10 @@ export const Display = styled.div`
     width: 100%;
     height: 20%;
 
-    border-bottom: 1px solid ${props => props.theme[props.currentTheme].border};
+    border-bottom: 1px solid ${props => props.theme.border};
 
-    background-color: ${props => props.theme[props.currentTheme].background};
-    color: ${props => props.theme[props.currentTheme].textColor};
+    background-color: ${props => props.theme.background};
+    color: ${props => props.theme.textColor};
         
     padding: 12% 0 0 0;
 

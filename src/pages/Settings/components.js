@@ -4,7 +4,7 @@ export const Card = styled.div`
   width: 100%;
   height: 100%;
 
-  background-color: ${props => props.theme[props.currentTheme].background};
+  background-color: ${props => props.theme.background};
 
   border-radius: 32px;
 
@@ -24,7 +24,7 @@ export const SettingWrapper = styled.div`
 
   h1{
     font-size: 3rem;
-    color: ${props => props.theme[props.currentTheme].textColor};
+    color: ${props => props.theme.textColor};
   }
 
   display: flex;
