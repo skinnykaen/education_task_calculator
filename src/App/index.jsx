@@ -14,7 +14,7 @@ const SettingsPage = lazy(() => import('@/pages/Settings'))
 
 export default (props) => {
 
-  const currentTheme = useSelector(state => state.switchTheme.theme);
+  const currentTheme = useSelector(state => state.switchTheme.currentTheme);
   console.log(theme[currentTheme])
 
   return (

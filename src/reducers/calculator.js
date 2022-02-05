@@ -8,6 +8,7 @@ const INITIAL_STATE = {
 
 export const clickKeyButton = createAction('CLICK_KEY_BUTTON');
 export const clickKeyClear = createAction('CLICK_KEY_CLEAR');
+export const clickKeyClearHistory = createAction('CLICK_KEY_CLEAR_HISTORY');
 export const clickKeyClearEntry = createAction('CLICK_KEY_CLEAR_ENTRY');
 export const clickHistoryElement = createAction('CLICK_HISTORY_ELEMENT');
 export const clickResultButton = createAction('CLICK_RESULT_BUTTON');
@@ -19,9 +20,6 @@ function makeExpression(expression) {
     try {
         return expression.replace(/\D\./, (s) => s.slice(0, 1) + '0.').replace('00.', '0.').replace('\\', '/');
     } catch (e) {
-        // throwError(e.toString());
-        alert(e)
-        // alert(e.type);
         return '';
     }
 
@@ -32,8 +30,6 @@ function calculation(expression) {
         let result = (parseInt(eval(makeExpression(expression)) * 1000) / 1000).toString();
         return isNaN(result) ? '' : result;
     } catch (e) {
-        // throwError(e.toString());
-        alert(e)
         return '';
     }
 }
@@ -52,10 +48,13 @@ export default handleActions({
         return { ...state, expression: action.payload };
     },
     [clickResultButton](state) {
-        return { ...state, history: [...state.history, state.expression], expression: calculation(state.expression) }
+        return { ...state, history: [...state.history, state.expression ? state.expression : '0'], expression: calculation(state.expression) }
     },
     [throwError](state, action) {
         return { ...state, error: action.payload }
+    },
+    [clickKeyClearHistory](state) {
+        return { ...state, history: [] }
     }
 
 

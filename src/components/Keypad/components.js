@@ -13,8 +13,8 @@ export const Keypad = styled.div`
 `;
 
 export const KeyButton = styled.button`
-    width: 6.2rem;
-    height: 6.2rem;
+    width: 5.2rem;
+    height: 4.59rem;
     margin: 0.4rem;
 
     text-align: center;

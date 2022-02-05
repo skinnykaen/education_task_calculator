@@ -8,8 +8,6 @@ import Calculator from '@/components/Calculator';
 
 import { Card } from './components';
 
-import { swithThemeAction, getTheme } from "@/reducers/switchTheme";
-
 export default (props) => {
   return (
     <PageLayout>

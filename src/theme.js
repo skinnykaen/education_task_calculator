@@ -40,7 +40,7 @@ const below = Object.keys(size).reduce((acc, label) => {
 }, {})
 
 export default {
-  light: {
+  Light: {
     above,
     below,
     boxShadows,
@@ -64,7 +64,7 @@ export default {
     keyButtonColor: 'lightgrey',
     keyButtonHoverColor: 'darkgrey',
   },
-  dark: {
+  Dark: {
     above,
     below,
     boxShadows,
@@ -88,7 +88,7 @@ export default {
     keyButtonColor: 'lightgrey',
     keyButtonHoverColor: 'darkgrey',
   },
-  colored: {
+  Colored: {
     above,
     below,
     boxShadows,

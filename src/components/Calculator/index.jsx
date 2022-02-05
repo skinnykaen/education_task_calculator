@@ -8,16 +8,6 @@ import { Calculator, Section } from "./components";
 import { Flex } from "../Flex/components";
 import { connect } from "react-redux";
 
-import {
-    getExpression,
-    clickKeyButton,
-    clickKeyClearEntry,
-    clickKeyClear,
-    clickHistoryElement,
-    clickResultButton,
-    getHistory,
-} from '@/reducers/calculator';
-
 export default (props) => {
 
     return (
@@ -33,4 +23,4 @@ export default (props) => {
     )
 }
 
-// to do test, clear history, select
+// to do test, select

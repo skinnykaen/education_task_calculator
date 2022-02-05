@@ -8,7 +8,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
-    font-family: ${theme.light.font};
+    font-family: ${theme.Light.font};
   }
 
   html, body {

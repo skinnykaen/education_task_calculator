@@ -28,16 +28,16 @@ export const HistoryContent = styled.div`
     overflow: auto; 
     ::-webkit-scrollbar {
         width: 10px;
-        background-color: #f9f9fd;
     }
       
     ::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background-color: grey;
+        background-color: ${props => props.theme.headingColor};
     }
 `;
 
 export const HistoryElement = styled.div`
+    cursor: pointer;
     min-wigth: 100%;
     min-hight: 100%;
 

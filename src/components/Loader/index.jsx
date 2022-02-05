@@ -10,7 +10,7 @@ export default () => {
   return (
     <Loader
       type="Bars"
-      color={theme.light.colors.secondary}
+      color={theme.Light.colors.secondary}
       height={LOADER_SIZE}
       width={LOADER_SIZE}
     />
