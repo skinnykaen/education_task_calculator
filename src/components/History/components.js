@@ -36,7 +36,7 @@ export const HistoryContent = styled.div`
     }
 `;
 
-export const HistoryElement = styled.div`
+export const HistoryElement = styled.li`
     cursor: pointer;
     min-wigth: 100%;
     min-hight: 100%;

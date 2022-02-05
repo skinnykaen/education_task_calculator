@@ -1,15 +1,3 @@
-import React from "react";
+import History from './History'
 
-import HistoryContent from "./HistoryContent";
-
-import { History } from "./components";
-
-export default (props) => {
-
-    return (
-        <History >
-            <h4>History</h4>
-            <HistoryContent></HistoryContent>
-        </History >
-    )
-}
+export default History

@@ -113,30 +113,3 @@ export default {
     keyButtonHoverColor: 'darkkhaki',
   }
 }
-
-
-// ??? здесь ли описывать темы
-
-export const lightTheme = {
-  background: 'white',
-  textColor: 'black',
-  headingColor: 'grey',
-  headingTextColor: 'lightgrey',
-  headingActiveTextColor: 'white',
-}
-
-export const darkTheme = {
-  background: 'grey',
-  textColor: 'white',
-  headingColor: 'dimgrey',
-  headingTextColor: 'silver',
-  headingActiveTextColor: 'white',
-}
-
-export const coloredTheme = {
-  background: 'peachpuff',
-  textColor: 'black',
-  headingColor: 'tan',
-  headingTextColor: 'silver',
-  headingActiveTextColor: 'black',
-}

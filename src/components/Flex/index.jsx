@@ -1,10 +1,3 @@
-import React from "react";
+import Flex from './Flex'
 
-import { Flex } from "./components";
-
-export default (props) => {
-
-    return (
-        <Flex {...props}></Flex>
-    )
-}
+export default Flex

@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 import { PageLayout } from '@/layouts';
 
-import Header from '@/components/Header'
-import Calculator from '@/components/Calculator';
+import Header from '@/components/Header/Header'
+import Calculator from '@/components/Calculator/Calculator';
 
 import { Card } from './components';
 

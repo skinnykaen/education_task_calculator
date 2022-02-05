@@ -15,10 +15,9 @@ export const clickResultButton = createAction('CLICK_RESULT_BUTTON');
 export const throwError = createAction('THROW_ERROR');
 
 
-/// ??? 
 function makeExpression(expression) {
     try {
-        return expression.replace(/\D\./, (s) => s.slice(0, 1) + '0.').replace('00.', '0.').replace('\\', '/');
+        return expression.replace(/\D\./, (s) => s.slice(0, 1) + '0.').replace('00.', '0.');
     } catch (e) {
         return '';
     }

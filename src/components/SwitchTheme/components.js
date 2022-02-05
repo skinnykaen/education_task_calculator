@@ -36,7 +36,7 @@ export const DropDownHeader = styled.div`
   &:after {
     content: "▼";
     position: absolute;
-    left: 190px;
+    left: 85%;
   }
 `;
 

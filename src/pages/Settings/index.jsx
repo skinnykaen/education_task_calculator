@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from "react-redux"
 
 import { PageLayout } from '@/layouts';
-import Header from '@/components/Header';
-import SwitchTheme from '@/components/SwitchTheme';
-import ControlPanel from "@/components/ControlPanel";
+import Header from '@/components/Header/Header';
+import SwitchTheme from '@/components/SwitchTheme/SwitchTheme';
+import ControlPanel from "@/components/ControlPanel/ControlPanel";
 import { Card, SettingWrapper } from './components';
 
 
