@@ -13,14 +13,10 @@ export default (props) => {
     return (
         <Calculator>
             <Flex direction='column' width='65%' margin='0 0 0 2%'>
-                <Display></Display>
-                <Keypad></Keypad>
+                <Display />
+                <Keypad />
             </Flex>
-
-            <History></History>
-
+            <History />
         </Calculator >
     )
 }
-
-// to do refactor structure, arrow
