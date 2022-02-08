@@ -7,15 +7,14 @@ import theme from '@/theme'
 
 import { ThemeProvider } from 'styled-components'
 
-import Loader from '@/components/Loader'
+import Loader from '@/components/FunctionalComponents/Loader'
 
-const HomePage = lazy(() => import('@/pages/Home'))
-const SettingsPage = lazy(() => import('@/pages/Settings'))
+const HomePage = lazy(() => import('@/pages/FunctionalPages/Home'))
+const SettingsPage = lazy(() => import('@/pages/FunctionalPages/Settings'))
 
 export default (props) => {
 
   const currentTheme = useSelector(state => state.switchTheme.currentTheme);
-  console.log(theme[currentTheme])
 
   return (
     <ThemeProvider theme={theme[currentTheme]}>

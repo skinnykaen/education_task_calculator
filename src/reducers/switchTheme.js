@@ -1,11 +1,11 @@
 import { createAction, handleActions } from 'redux-actions'
 
+import { SWITCH_THEME } from '@/constants/actions'
+import { swithThemeAction } from '@/actions'
 const INITIAL_STATE = {
     currentTheme: 'Light',
     themeItems: ['Light', 'Dark', 'Colored'],
 }
-
-export const swithThemeAction = createAction('SWITCH_THEME');
 
 export default handleActions({
     [swithThemeAction](state, action) {
