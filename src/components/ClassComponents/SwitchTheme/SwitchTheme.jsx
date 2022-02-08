@@ -24,7 +24,7 @@ class SwitchThemeWrapper extends React.Component {
 
     }
     getValue() {
-        return document.getElementById('theme_switcher').value;
+        return document.getElementById('theme_switcher').value; // to do ref
     }
 
     switchThemeHandler(v) {
