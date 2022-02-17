@@ -23,24 +23,18 @@ class SwitchThemeWrapper extends React.Component {
         }
 
     }
-    getValue() {
-        return document.getElementById('theme_switcher').value; // to do ref
-    }
 
-    switchThemeHandler(v) {
-        this.props.swithThemeAction(v)
-    }
     render() {
         return (
             <>
                 <Title>Switch Theme</Title>
                 <DropDownContainer>
-                    <DropDownHeader onClick={toggling}>{currentTheme + ' theme'}</DropDownHeader>
+                    <DropDownHeader onClick={toggling}>{currentTheme} theme</DropDownHeader>
                     {isOpen && (
                         <DropDownListContainer>
                             <DropDownList>
                                 {themeItems.map((e, i) => {
-                                    if (currentTheme !== e) return <ListItem onClick={() => { switchThemeHandler(e) }} key={i}>{e + ' theme'}</ListItem>
+                                    if (currentTheme !== e) return <ListItem onClick={() => { this.props.swithThemeAction(e) }} key={i}>{e} theme</ListItem>
                                 })}
                             </DropDownList>
                         </DropDownListContainer>

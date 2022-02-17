@@ -12,8 +12,7 @@ class HistoryContentWrapper extends React.Component {
         return history.map((e, i) =>
             <HistoryElement id={i}
                 key={String(i)}
-                value={e}
-                onClick={(event) => { clickHistoryElement(event.target.innerText) }}> {e}
+                onClick={() => { clickHistoryElement(e) }}> {e}
             </HistoryElement >
         );
     }

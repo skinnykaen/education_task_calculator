@@ -2,8 +2,7 @@ import React from "react";
 
 import { Flex } from "./components";
 
-
-class FlexWrapper extends React.Component {
+export default class extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -13,5 +12,3 @@ class FlexWrapper extends React.Component {
         )
     }
 }
-
-export default FlexWrapper

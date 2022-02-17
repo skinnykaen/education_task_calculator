@@ -1,5 +1,6 @@
 // @todo: add some actions
 import { createAction } from 'redux-actions'
+import { evaluate } from 'mathjs'
 
 import {
     CLICK_KEY_BUTTON,
@@ -17,21 +18,22 @@ const makeExpression = expression => {
     } catch (e) {
         return '';
     }
-
 }
 
 const calculation = expression => {
     let result;
+    let finalExpr = makeExpression(expression);
     try {
-        result = (parseInt(eval(makeExpression(expression)) * 1000) / 1000).toString();
-        isNaN(result) ? (result = '') : result;
+        result = (parseInt(evaluate(finalExpr) * 1000) / 1000).toString();
+        if (isNaN(result)) {
+            result = '';
+        }
     } catch (e) {
-        console.log(e)
+        console.error(e)
         result = '';
     }
-    return {
-        result,
-    }
+    return { result };
+
 }
 
 

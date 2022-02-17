@@ -10,8 +10,6 @@ export const Header = styled.div`
     background-color: ${({ theme }) => theme.headingColor};
 `;
 
-export const Title = styled.h3``;
-
 export const NavBar = styled.div`
     min-width: 150px;
     height: 30px;

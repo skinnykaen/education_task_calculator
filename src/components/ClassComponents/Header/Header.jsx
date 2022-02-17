@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import Flex from "@/components/ClassComponents/Flex";
 
-import { Header, Title, NavBar } from "./components";
+import { Header, NavBar } from "./components";
 
 
 class HeaderWrapper extends React.Component {
@@ -18,7 +18,7 @@ class HeaderWrapper extends React.Component {
         return (
             <Header >
                 <Flex justify='space-between' align='flex-start'>
-                    <Title> Calculator App</Title>
+                    <h3>Calculator App</h3>
                     <NavBar isSetting={this.isSetting(this.props.location)}>
                         <Flex justify='space-between'>
                             <Link to='/'>Home</Link>
