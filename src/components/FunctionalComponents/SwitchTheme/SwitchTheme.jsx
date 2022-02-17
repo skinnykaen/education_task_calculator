@@ -16,7 +16,7 @@ import { swithThemeAction } from '@/actions'
 import { useSelector } from "react-redux";
 
 function getValue() {
-    return document.getElementById('theme_switcher').value; // to do ref
+    return document.getElementById('theme_switcher').value; // to do refs
 }
 
 
