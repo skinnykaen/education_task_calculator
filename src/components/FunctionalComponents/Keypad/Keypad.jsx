@@ -1,52 +1,40 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import KeyButton from "./KeyButton";
+import { Keypad, Row } from "./components";
 
-import { Keypad, KeyButton, Row } from "./components";
-import { clickKeyButton, clickKeyClear, clickKeyClearEntry, clickResultButton } from '@/actions'
-import { useSelector } from "react-redux";
-import { getExpression } from "@/reducers/calculator";
-
-export default (props) => {
-
-    const dispatch = useDispatch();
-    const expr = useSelector(state => getExpression(state.calculator))
-
-    function keyButtonHandler(v) {
-        dispatch(clickKeyButton(v))
-    }
-
+export default () => {
     return (
         <Keypad>
             <Row>
-                <KeyButton onClick={() => { dispatch(clickKeyClear()) }}>C</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(7) }}>7</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(8) }}>8</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(9) }}>9</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler('*') }}>*</KeyButton>
+                <KeyButton value={'C'} />
+                <KeyButton value={7} />
+                <KeyButton value={8} />
+                <KeyButton value={9} />
+                <KeyButton value={'*'} />
             </Row>
             <Row>
-                <KeyButton onClick={() => { keyButtonHandler('-') }}>-</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(4) }}>4</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(5) }}>5</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(6) }}>6</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler('/') }}>/</KeyButton>
+                <KeyButton value={'-'} />
+                <KeyButton value={4} />
+                <KeyButton value={5} />
+                <KeyButton value={6} />
+                <KeyButton value={'/'} />
             </Row>
             <Row>
-                <KeyButton onClick={() => { keyButtonHandler('+') }}>+</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(1) }}>1</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(2) }}>2</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(3) }}>3</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler('%') }}>%</KeyButton>
+                <KeyButton value={'+'} />
+                <KeyButton value={1} />
+                <KeyButton value={2} />
+                <KeyButton value={3} />
+                <KeyButton value={'%'} />
             </Row>
             <Row>
-                <KeyButton onClick={() => { keyButtonHandler('.') }}>.</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler('(') }}>(</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(0) }}>0</KeyButton>
-                <KeyButton onClick={() => { keyButtonHandler(')') }}>)</KeyButton>
-                <KeyButton onClick={() => { dispatch(clickKeyClearEntry()) }} > CE </KeyButton>
+                <KeyButton value={'.'} />
+                <KeyButton value={'('} />
+                <KeyButton value={0} />
+                <KeyButton value={')'} />
+                <KeyButton value={'CE'} />
             </Row>
             <Row>
-                <KeyButton onClick={() => { dispatch(clickResultButton(expr)) }}>=</KeyButton>
+                <KeyButton value={'='} />
             </Row>
 
         </Keypad >

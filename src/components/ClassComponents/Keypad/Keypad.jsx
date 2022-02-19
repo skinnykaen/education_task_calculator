@@ -1,7 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
-import { Keypad, KeyButton, Row } from "./components";
-import { clickKeyButton, clickKeyClear, clickKeyClearEntry, clickResultButton } from '@/actions'
+import { Keypad, Row } from "./components";
+import KeyButton from './KeyButton';
 
 import { getExpression } from "@/reducers/calculator";
 
@@ -9,46 +8,44 @@ class KeypadWrapper extends React.Component {
     constructor(props) {
         super(props);
     }
-    keyButtonHandler(v) {
-        this.props.clickKeyButton(v)
-    }
+
     render() {
         return (
             <Keypad>
-                <Row>
-                    <KeyButton onClick={() => { this.props.clickKeyClear() }}>C</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(7) }}>7</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(8) }}>8</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(9) }}>9</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler('*') }}>*</KeyButton>
-                </Row>
-                <Row>
-                    <KeyButton onClick={() => { this.keyButtonHandler('-') }}>-</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(4) }}>4</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(5) }}>5</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(6) }}>6</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler('/') }}>/</KeyButton>
-                </Row>
-                <Row>
-                    <KeyButton onClick={() => { this.keyButtonHandler('+') }}>+</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(1) }}>1</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(2) }}>2</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(3) }}>3</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler('%') }}>%</KeyButton>
-                </Row>
-                <Row>
-                    <KeyButton onClick={() => { this.keyButtonHandler('.') }}>.</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler('(') }}>(</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(0) }}>0</KeyButton>
-                    <KeyButton onClick={() => { this.keyButtonHandler(')') }}>)</KeyButton>
-                    <KeyButton onClick={() => { this.props.clickKeyClearEntry() }} > CE </KeyButton>
-                </Row>
-                <Row>
-                    <KeyButton onClick={() => { this.props.clickResultButton(this.props.expression) }}>=</KeyButton>
-                </Row>
 
+                <Row>
+                    <KeyButton value={'C'} />
+                    <KeyButton value={7} />
+                    <KeyButton value={8} />
+                    <KeyButton value={9} />
+                    <KeyButton value={'*'} />
+                </Row>
+                <Row>
+                    <KeyButton value={'-'} />
+                    <KeyButton value={4} />
+                    <KeyButton value={5} />
+                    <KeyButton value={6} />
+                    <KeyButton value={'/'} />
+                </Row>
+                <Row>
+                    <KeyButton value={'+'} />
+                    <KeyButton value={1} />
+                    <KeyButton value={2} />
+                    <KeyButton value={3} />
+                    <KeyButton value={'%'} />
+                </Row>
+                <Row>
+                    <KeyButton value={'.'} />
+                    <KeyButton value={'('} />
+                    <KeyButton value={0} />
+                    <KeyButton value={')'} />
+                    <KeyButton value={'CE'} />
+                </Row>
+                <Row>
+                    <KeyButton value={'='} />
+                </Row>
             </Keypad >
         )
     }
 }
-export default connect(state => ({ expression: getExpression(state.calculator) }), { clickKeyButton, clickKeyClear, clickKeyClearEntry, clickResultButton })(KeypadWrapper)
+export default KeypadWrapper;
