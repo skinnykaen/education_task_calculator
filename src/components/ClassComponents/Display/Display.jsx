@@ -1,13 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from "react"
+import { connect } from "react-redux"
 
-import { Display } from "./components";
+import { Display } from "./components"
 
 class DisplayWrapper extends React.Component {
     showExpression(expression) {
-        const MAX_LENGTH = 24;
-        return (expression.length > MAX_LENGTH) ? expression.slice(expression.length - MAX_LENGTH) : expression;
+        const MAX_LENGTH = 24
+        return (expression.length > MAX_LENGTH) ? expression.slice(expression.length - MAX_LENGTH) : expression
     }
+
     render() {
         return (
             <Display >

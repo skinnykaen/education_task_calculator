@@ -9,4 +9,4 @@ export const Flex = styled.div`
 
     width: ${({ width }) => width || 'auto'};
     height: ${({ height }) => height || 'auto'};
-`;
+`

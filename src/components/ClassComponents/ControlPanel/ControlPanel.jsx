@@ -1,7 +1,7 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from "react"
+import { connect } from "react-redux"
 
-import { ControlPanel } from "./components";
+import { ControlPanel } from "./components"
 import { clickKeyClearHistory } from "@/actions"
 
 

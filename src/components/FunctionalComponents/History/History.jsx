@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 
-import HistoryContent from "./HistoryContent";
+import HistoryContent from "./HistoryContent"
 
-import { History } from "./components";
+import { History } from "./components"
 
 export default () => {
 

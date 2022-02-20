@@ -17,7 +17,7 @@ export const History = styled.div`
     h4{
         text-align: center;
     }
-`;
+`
 
 export const HistoryContent = styled.div`
     margin: 0 0 0 5%;
@@ -32,7 +32,7 @@ export const HistoryContent = styled.div`
         border-radius: 10px;
         background-color: ${({ theme }) => theme.headingColor};
     }
-`;
+`
 
 export const HistoryElement = styled.li`
     min-wigth: 100%;
@@ -49,4 +49,4 @@ export const HistoryElement = styled.li`
         background-color: ${({ theme }) => theme.headingColor};
         color: ${({ theme }) => theme.headingActiveTextColor};
         }
-`;
+`

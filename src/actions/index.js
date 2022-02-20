@@ -9,38 +9,38 @@ import {
     CLICK_KEY_CLEAR_ENTRY,
     CLICK_HISTORY_ELEMENT,
     CLICK_RESULT_BUTTON,
-    SWITCH_THEME
-} from '@/constants/actions';
+    SWITCH_THEME,
+} from '@/constants/actions'
 
 const makeExpression = expression => {
     try {
-        return expression.replace(/\D\./, (s) => s.slice(0, 1) + '0.').replace('00.', '0.');
+        return expression.replace(/\D\./, s => s.slice(0, 1) + '0.').replace('00.', '0.')
     } catch (e) {
-        return '';
+        return ''
     }
 }
 
 const calculation = expression => {
-    let result;
-    let finalExpr = makeExpression(expression);
+    let result
+    const finalExpr = makeExpression(expression)
     try {
-        result = (parseInt(evaluate(finalExpr) * 1000) / 1000).toString();
+        result = (parseInt(evaluate(finalExpr) * 1000) / 1000).toString()
         if (isNaN(result)) {
-            result = '';
+            result = ''
         }
     } catch (e) {
         console.error(e)
-        result = '';
+        result = ''
     }
-    return { result };
+    return { result }
 
 }
 
 
-export const clickKeyButton = createAction(CLICK_KEY_BUTTON);
-export const clickKeyClear = createAction(CLICK_KEY_CLEAR);
-export const clickKeyClearHistory = createAction(CLICK_KEY_CLEAR_HISTORY);
-export const clickKeyClearEntry = createAction(CLICK_KEY_CLEAR_ENTRY);
-export const clickHistoryElement = createAction(CLICK_HISTORY_ELEMENT);
-export const clickResultButton = createAction(CLICK_RESULT_BUTTON, calculation);
-export const swithThemeAction = createAction(SWITCH_THEME);
+export const clickKeyButton = createAction(CLICK_KEY_BUTTON)
+export const clickKeyClear = createAction(CLICK_KEY_CLEAR)
+export const clickKeyClearHistory = createAction(CLICK_KEY_CLEAR_HISTORY)
+export const clickKeyClearEntry = createAction(CLICK_KEY_CLEAR_ENTRY)
+export const clickHistoryElement = createAction(CLICK_HISTORY_ELEMENT)
+export const clickResultButton = createAction(CLICK_RESULT_BUTTON, calculation)
+export const swithThemeAction = createAction(SWITCH_THEME)

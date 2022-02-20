@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Title = styled.h3`
   margin-top: 1%;
   font-weight: normal;
   font-size: 1.2rem;
-`;
+`
 
 export const DropDownContainer = styled.div`
   width: 20%;
@@ -14,7 +14,7 @@ export const DropDownContainer = styled.div`
   position: relative;
   margin-top: 1rem;
   padding: 0.1rem 0;
-`;
+`
 
 export const DropDownHeader = styled.div`
   display: flex;
@@ -38,10 +38,10 @@ export const DropDownHeader = styled.div`
     position: absolute;
     left: 85%;
   }
-`;
+`
 
 export const DropDownListContainer = styled.div`
-`;
+`
 
 export const DropDownList = styled.ul`
   padding: 0;
@@ -61,7 +61,7 @@ export const DropDownList = styled.ul`
     &:first-child {
     padding-top: 0.3em;
   }
-`;
+`
 
 export const ListItem = styled.li`
   list-style: none;
@@ -80,4 +80,4 @@ export const ListItem = styled.li`
     color: ${props => props.theme.headingTextColor};
     border-bottom: 2px solid ${props => props.theme.headingActiveTextColor};
   }
-`;
+`

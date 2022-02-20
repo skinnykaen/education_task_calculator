@@ -1,25 +1,31 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from "react"
+import { connect } from "react-redux"
+import PropTypes from "prop-types"
 
-import { HistoryContent, HistoryElement } from "./components";
+import { HistoryContent, HistoryElement } from "./components"
 import { clickHistoryElement } from '@/actions'
 
 class HistoryContentWrapper extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     getItems(history) {
-        return history.map((e, i) =>
+        return history.map((expression, i) =>
             <HistoryElement id={i}
                 key={String(i)}
-                onClick={() => { clickHistoryElement(e) }}> {e}
-            </HistoryElement >
-        );
+                value={expression}
+                onClick={() => { clickHistoryElement(expression) }}> {expression}
+            </HistoryElement >,
+        )
     }
+
     render() {
         return (
             <HistoryContent>{this.getItems(this.props.history)}</HistoryContent>
         )
     }
 }
+
+HistoryElement.propTypes = {
+    id: PropTypes.number,
+    value: PropTypes.string,
+}
+
 export default connect(state => ({ history: state.calculator.history }), { clickHistoryElement })(HistoryContentWrapper)

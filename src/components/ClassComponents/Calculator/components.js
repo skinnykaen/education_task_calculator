@@ -9,4 +9,4 @@ export const Calculator = styled.div`
     justify-content: space-between;
 
     background-color: ${({ theme }) => theme.background};
-`;
+`

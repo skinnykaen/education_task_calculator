@@ -8,7 +8,7 @@ export const Header = styled.div`
     color: ${({ theme }) => theme.headingTextColor || 'white'};
 
     background-color: ${({ theme }) => theme.headingColor};
-`;
+`
 
 export const NavBar = styled.div`
     min-width: 150px;
@@ -32,4 +32,4 @@ export const NavBar = styled.div`
             border-bottom: ${({ isSetting, theme }) => isSetting ? (`3px solid ${theme.headingActiveTextColor}`) : 'none'};
         }
     }
-`;
+`

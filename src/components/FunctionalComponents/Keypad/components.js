@@ -10,7 +10,7 @@ export const Keypad = styled.div`
     padding: 5%;
 
     background-color: ${({ theme }) => theme.background};
-`;
+`
 
 export const KeyButton = styled.button`
     width: 5.2rem;
@@ -28,10 +28,10 @@ export const KeyButton = styled.button`
         background-color: ${({ theme }) => theme.keyButtonHoverColor};
     }
 
-`;
+`
 
 export const Row = styled.div`
     display: flex;
     justify-content: space-around;
     padding: 0.3rem;
-`;
+`

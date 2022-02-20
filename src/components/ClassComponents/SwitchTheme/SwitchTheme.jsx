@@ -1,49 +1,51 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from "react"
+import { connect } from "react-redux"
 
 import {
-    SwitchTheme,
     Title,
     DropDownContainer,
     DropDownList,
     DropDownListContainer,
     ListItem,
-    DropDownHeader
-} from "./components";
+    DropDownHeader,
+} from "./components"
 
 import { getCurrentTheme, getThemeItems } from '@/reducers/switchTheme'
-import { swithThemeAction } from '@/actions';
+import { swithThemeAction } from '@/actions'
 
 
 class SwitchThemeWrapper extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
-            isOpen: false
+            isOpen: false,
         }
-
     }
+
+    handleToggling = () => this.setState(!this.state.isOpen)
 
     render() {
         return (
-            <>
+            <React.Fragment>
                 <Title>Switch Theme</Title>
                 <DropDownContainer>
-                    <DropDownHeader onClick={toggling}>{currentTheme} theme</DropDownHeader>
-                    {isOpen && (
+                    <DropDownHeader onClick={this.handleToggling}>{this.props.currentTheme} theme</DropDownHeader>
+                    {this.state.isOpen && (
                         <DropDownListContainer>
                             <DropDownList>
-                                {themeItems.map((e, i) => {
-                                    if (currentTheme !== e) return <ListItem onClick={() => { this.props.swithThemeAction(e) }} key={i}>{e} theme</ListItem>
+                                {this.props.themeItems.map((theme, i) => {
+                                    if (this.props.currentTheme !== theme)
+                                        return <ListItem onClick={() => { this.props.swithThemeAction(theme) }} key={i}>{theme} theme</ListItem>
                                 })}
                             </DropDownList>
                         </DropDownListContainer>
                     )}
                 </DropDownContainer>
-            </>
+            </React.Fragment>
         )
     }
 }
-export default connect(state => ({ theme: getCurrentTheme(state.switchTheme), themeItems: getThemeItems(state.switchTheme) }), {
-    swithThemeAction
+
+export default connect(state => ({ currentTheme: getCurrentTheme(state.switchTheme), themeItems: getThemeItems(state.switchTheme) }), {
+    swithThemeAction,
 })(SwitchThemeWrapper)

@@ -15,4 +15,4 @@ export const Display = styled.div`
     padding: 12% 0 0 0;
 
     font-size: 3rem;
-`;
+`

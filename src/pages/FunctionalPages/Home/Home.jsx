@@ -1,14 +1,12 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
 
-import { PageLayout } from '@/layouts';
-
+import { PageLayout } from '@/layouts'
 import Header from '@/components/FunctionalComponents/Header'
-import Calculator from '@/components/FunctionalComponents/Calculator';
+import Calculator from '@/components/FunctionalComponents/Calculator'
 
-import { Card } from './components';
+import { Card } from './components'
 
-export default (props) => {
+export default props => {
   return (
     <PageLayout>
       <Card >

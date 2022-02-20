@@ -20,4 +20,4 @@ export const ControlPanel = styled.div`
         background-color: ${({ theme }) => theme.headingColor};
         color: ${({ theme }) => theme.headingActiveTextColor};
     }
-`;
+`
