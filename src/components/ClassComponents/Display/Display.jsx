@@ -11,10 +11,11 @@ class DisplayWrapper extends React.Component {
 
     render() {
         return (
-            <Display >
+            <Display data-cy={'Display'}>
                 {this.showExpression(this.props.expression) || '0'}
             </Display>
         )
     }
 }
+
 export default connect(state => ({ expression: state.calculator.expression }), {})(DisplayWrapper)

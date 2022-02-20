@@ -8,6 +8,6 @@ export default () => {
     const dispatch = useDispatch()
 
     return (
-        <ControlPanel onClick={() => { dispatch(clickKeyClearHistory()) }}>Clear History</ControlPanel>
+        <ControlPanel data-cy={'ControlPanel'} onClick={() => { dispatch(clickKeyClearHistory()) }}>Clear History</ControlPanel>
     )
 }

@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux'
+
 import { KeyButton } from './components'
 import { clickKeyButton, clickKeyClear, clickKeyClearEntry, clickResultButton } from '@/actions'
 import { getExpression } from "@/reducers/calculator"
-import { connect } from 'react-redux'
 
 
 class KeyButtonWrapper extends React.Component {
@@ -24,10 +25,11 @@ class KeyButtonWrapper extends React.Component {
 
     render() {
         return (
-            <KeyButton onClick={() => { this.keyButtonHandler(this.props.value) }}>{this.props.value}</KeyButton>
+            <KeyButton data-cy={'KeyButton'} onClick={() => { this.keyButtonHandler(this.props.value) }}>{this.props.value}</KeyButton>
         )
     }
 }
+
 export default connect(state => ({ expression: getExpression(state.calculator) }),
     { clickKeyButton, clickKeyClear, clickKeyClearEntry, clickResultButton })
     (KeyButtonWrapper)

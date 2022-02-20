@@ -11,6 +11,7 @@ class HistoryContentWrapper extends React.Component {
             <HistoryElement id={i}
                 key={String(i)}
                 value={expression}
+                data-cy={'HistoryElement'}
                 onClick={() => { clickHistoryElement(expression) }}> {expression}
             </HistoryElement >,
         )

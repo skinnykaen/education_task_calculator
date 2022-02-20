@@ -14,6 +14,7 @@ export default () => {
         <HistoryElement id={i}
             key={String(i)}
             value={expression}
+            data-cy={'HistoryElement'}
             onClick={() => { dispath(clickHistoryElement(expression)) }}> {expression}
         </HistoryElement >,
     )

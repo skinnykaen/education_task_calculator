@@ -26,6 +26,6 @@ export default ({ value }) => {
         }
     }
     return (
-        <KeyButton onClick={() => { keyButtonHandler(value) }}>{value}</KeyButton>
+        <KeyButton data-cy={'KeyButton'} onClick={() => { keyButtonHandler(value) }}>{value}</KeyButton>
     )
 }

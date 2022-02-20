@@ -13,7 +13,7 @@ export default () => {
     }
 
     return (
-        <Display >
+        <Display data-cy={'Display'} >
             {showExpression(expression) || '0'}
         </Display>
     )

@@ -8,7 +8,7 @@ import { clickKeyClearHistory } from "@/actions"
 class ControlPanelWrapper extends React.Component {
     render() {
         return (
-            <ControlPanel onClick={() => { this.props.clickKeyClearHistory() }}>Clear History</ControlPanel>
+            <ControlPanel data-cy={'ControlPanel'} onClick={() => { this.props.clickKeyClearHistory() }}>Clear History</ControlPanel>
         )
     }
 }
