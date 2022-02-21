@@ -111,5 +111,5 @@ export default {
     border: 'sienna',
     keyButtonColor: 'khaki',
     keyButtonHoverColor: 'darkkhaki',
-  }
+  },
 }

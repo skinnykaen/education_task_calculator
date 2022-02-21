@@ -6,12 +6,10 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
-
 import Application from '@/App'
 
 import { store } from '@/store'
 import GlobalStyles from '@/globalStyles'
-
 
 ReactDOM.render(
   <Provider store={store}>
