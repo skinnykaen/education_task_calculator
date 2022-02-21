@@ -35,7 +35,7 @@ class SwitchThemeWrapper extends React.Component {
                             <DropDownList data-cy={'DropDownList'}>
                                 {this.props.themeItems.map((theme, i) => {
                                     if (this.props.currentTheme !== theme)
-                                        return <ListItem data-cy={'ListItem'} onClick={() => { this.props.swithThemeAction(theme) }} key={i}>{theme} theme</ListItem>
+                                        return <ListItem data-cy={'ListItem'} onClick={() => { this.props.swithThemeAction(theme) }} key={theme}>{theme} theme</ListItem>
                                 })}
                             </DropDownList>
                         </DropDownListContainer>
