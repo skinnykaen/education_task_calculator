@@ -32,7 +32,7 @@ export default props => {
                         <DropDownList data-cy={'DropDownList'}>
                             {themeItems.map((theme, i) => {
                                 if (currentTheme !== theme)
-                                    return <ListItem data-cy={'ListItem'} onClick={() => { dispatch(swithThemeAction(theme)) }} key={i}>{theme} theme</ListItem>
+                                    return <ListItem data-cy={'ListItem'} onClick={() => { dispatch(swithThemeAction(theme)) }} key={theme}>{theme} theme</ListItem>
                             })}
                         </DropDownList>
                     </DropDownListContainer>
